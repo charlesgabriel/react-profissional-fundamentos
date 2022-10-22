@@ -1,5 +1,7 @@
 import React from "react";
 
+import "./Hero.css";
+
 const Hero = ({ title, children }) => (
   <div>
     <div>
