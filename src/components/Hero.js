@@ -3,12 +3,28 @@ import styled, { css } from "styled-components";
 
 const Root = styled.div`
   color: #fff;
+  padding: 100px 0;
+
   ${(props) => css`
     background: url(${props.image}), rgba(0, 0, 0, 0.4);
-    background-size: cover;
-    background-position: center;
     background-blend-mode: overlay;
+    background-position: center;
+    background-size: cover;
   `}
+`;
+
+const Container = styled.div`
+  padding: 0 8px;
+  width: 100%;
+
+  @media (min-width: 768px) {
+    padding: 0 16px;
+  }
+
+  @media (min-width: 1200px) {
+    margin: 0 auto;
+    max-width: 1140px;
+  }
 `;
 
 const Title = styled.h1`
@@ -37,10 +53,10 @@ const Content = styled.div`
 
 const Hero = ({ image, title, children }) => (
   <Root image={image}>
-    <div>
+    <Container>
       <Title>{title}</Title>
       <Content>{children}</Content>
-    </div>
+    </Container>
   </Root>
 );
 
