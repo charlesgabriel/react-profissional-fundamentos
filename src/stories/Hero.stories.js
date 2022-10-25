@@ -16,7 +16,15 @@ export const usage = () => (
 );
 
 export const withList = () => (
-  <Hero title="Ganhe sua liberdade para ir e vir" image={bgCarImage}>
+  <Hero
+    title={
+      <span>
+        Ganhe sua <strong>liberdade</strong>
+        <br /> para ir e vir
+      </span>
+    }
+    image={bgCarImage}
+  >
     <ul>
       <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</li>
       <li>Earum, similique labore.</li>
