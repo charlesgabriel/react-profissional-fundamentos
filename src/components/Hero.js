@@ -4,6 +4,8 @@ import styled, { css } from "styled-components";
 
 import { breakAt, BreakpointSize } from "./Breakpoints";
 
+const colorYellow = "#ffc107";
+
 const Root = styled.div`
   color: #fff;
   padding: 100px 0;
