@@ -4,8 +4,6 @@ import styled, { css } from "styled-components";
 
 import { breakAt, BreakpointSize } from "./Breakpoints";
 
-const colorYellow = "#ffc107";
-
 const Root = styled.div`
   color: #fff;
   padding: 100px 0;
@@ -33,28 +31,24 @@ const Container = styled.div`
   }
 `;
 
-const Title = styled.h1`
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-  font-weight: 700;
-  letter-spacing: 2px;
-  margin-bottom: 25px;
-  padding-bottom: 25px;
-  position: relative;
+// const Title = styled.h1`
+//   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+//   font-weight: 700;
+//   letter-spacing: 2px;
+//   margin-bottom: 25px;
+//   padding-bottom: 25px;
+//   position: relative;
 
-  &::after {
-    background-color: ${colorYellow};
-    bottom: -3px;
-    content: "";
-    height: 5px;
-    left: 0;
-    position: absolute;
-    width: 70px;
-  }
-
-  strong {
-    color: ${colorYellow};
-  }
-`;
+//   &::after {
+//     background-color: ${colorYellow};
+//     bottom: -3px;
+//     content: "";
+//     height: 5px;
+//     left: 0;
+//     position: absolute;
+//     width: 70px;
+//   }
+// `;
 
 const Content = styled.div`
   p,
@@ -76,10 +70,9 @@ const Content = styled.div`
   }
 `;
 
-const Hero = ({ image, title, children }) => (
+const Hero = ({ image, children }) => (
   <Root image={image}>
     <Container>
-      <Title>{title}</Title>
       <Content>{children}</Content>
     </Container>
   </Root>
@@ -87,7 +80,6 @@ const Hero = ({ image, title, children }) => (
 
 Hero.propTypes = {
   image: PropTypes.string,
-  title: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
   children: PropTypes.node,
 };
 
