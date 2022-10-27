@@ -33,25 +33,6 @@ const Container = styled.div`
   }
 `;
 
-// const Title = styled.h1`
-//   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-//   font-weight: 700;
-//   letter-spacing: 2px;
-//   margin-bottom: 25px;
-//   padding-bottom: 25px;
-//   position: relative;
-
-//   &::after {
-//     background-color: ${colorYellow};
-//     bottom: -3px;
-//     content: "";
-//     height: 5px;
-//     left: 0;
-//     position: absolute;
-//     width: 70px;
-//   }
-// `;
-
 const Content = styled.div`
   p,
   li {
