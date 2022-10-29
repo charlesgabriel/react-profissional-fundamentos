@@ -12,7 +12,12 @@ module.exports = {
     "@storybook/preset-create-react-app",
     "@storybook/addon-viewport",
     "@storybook/addon-docs",
-    "@storybook/addon-knobs",
+    {
+      name: "@storybook/addon-docs",
+      options: {
+        configureJSX: true,
+      },
+    },
   ],
   framework: "@storybook/react",
   core: {
