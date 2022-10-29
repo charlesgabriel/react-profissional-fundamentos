@@ -6,7 +6,7 @@ import bgCarImage from "../stories/assets/bg-car.jpg";
 import Heading from "./Heading";
 
 export default {
-  title: "Hero",
+  title: "Components/Hero",
   component: Hero,
 };
 
