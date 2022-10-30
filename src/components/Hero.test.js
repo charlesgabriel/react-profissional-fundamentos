@@ -9,5 +9,5 @@ test("render Hero with children", () => {
     </Hero>
   );
 
-  expect(getByText("Charles Gabriel")).toBeTruthy();
+  expect(getByText("Charles Gabriel")).toBeInTheDocument();
 });
