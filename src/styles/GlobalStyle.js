@@ -3,8 +3,6 @@ import { createGlobalStyle } from "styled-components";
 import { breakAt, BreakpointSizes } from "./Breakpoints";
 
 const GlobalStyle = createGlobalStyle`
-  @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;700&display=swap");
-  
   html {
     color: #212121;
     box-sizing: border-box;
