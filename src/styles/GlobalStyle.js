@@ -1,4 +1,6 @@
+import React from "react";
 import { createGlobalStyle } from "styled-components";
+import { Helmet } from "react-helmet";
 
 import { breakAt, BreakpointSizes } from "./Breakpoints";
 
@@ -81,4 +83,18 @@ const GlobalStyle = createGlobalStyle`
   }
 `;
 
-export default GlobalStyle;
+const GlobalStyleComposed = () => (
+  <>
+    <GlobalStyle />
+    <Helmet>
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;700&display=swap"
+        rel="stylesheet"
+      />
+    </Helmet>
+  </>
+);
+
+export default GlobalStyleComposed;
