@@ -4,10 +4,13 @@ import styled from "styled-components";
 
 // const Button = ({ type, children }) => <Button type={type}>{children}</Button>;
 
+const getPrimaryColor = (props) => props.theme.colors.primary.main;
+const getPrimaryText = (props) => props.theme.colors.primary.text;
+
 const Button = styled.button`
-  background-color: ${(props) => props.theme.colorYellow};
-  border: 2px solid ${(props) => props.theme.colorYellow};
-  color: #212121;
+  background-color: ${getPrimaryColor};
+  border: 2px solid ${getPrimaryColor};
+  color: ${getPrimaryText};
   cursor: pointer;
   font-size: 1rem;
   font-weight: 600;
