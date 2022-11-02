@@ -5,8 +5,8 @@ import styled from "styled-components";
 // const Button = ({ type, children }) => <Button type={type}>{children}</Button>;
 
 const Button = styled.button`
-  background-color: #ffc107;
-  border: 2px solid #ffc107;
+  background-color: ${(props) => props.theme.colorYellow};
+  border: 2px solid ${(props) => props.theme.colorYellow};
   color: #212121;
   cursor: pointer;
   font-size: 1rem;
