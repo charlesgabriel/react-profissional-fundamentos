@@ -7,12 +7,4 @@ export default {
   component: Button,
 };
 
-const theme = {
-  colorYellow: "#ffc107",
-};
-
-export const usage = () => (
-  <ThemeProvider theme={theme}>
-    <Button>Meu Botão</Button>
-  </ThemeProvider>
-);
+export const usage = () => <Button>Meu Botão</Button>;
