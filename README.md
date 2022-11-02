@@ -1,5 +1,7 @@
 # Curso React Profissional - Auto Escola
 
+Este projeto foi criado no curso [React Profissional](https://www.nardiniacademy.com).
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
