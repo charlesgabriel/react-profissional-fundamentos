@@ -1,4 +1,5 @@
 import React from "react";
+import { actions } from "@storybook/addon-actions";
 import Button from "./Button";
 import styled from "styled-components";
 
@@ -7,6 +8,8 @@ export default {
   component: Button,
 };
 
+const events = actions({ onClick: "clicked" });
+
 const Toolbar = styled.div`
   & > * {
     margin-right: 8px;
@@ -14,9 +17,28 @@ const Toolbar = styled.div`
 `;
 
 export const usage = () => (
-  <Toolbar>
-    <Button>Default</Button>
-    <Button color="primary">Primary</Button>
-    <Button color="danger">Danger</Button>
-  </Toolbar>
+  <div>
+    <p>Enabled:</p>
+    <Toolbar>
+      <Button {...events}>Default</Button>
+      <Button color="primary" {...events}>
+        Primary
+      </Button>
+      <Button color="danger" {...events}>
+        Danger
+      </Button>
+    </Toolbar>
+    <p>Disabled:</p>
+    <Toolbar>
+      <Button disabled {...events}>
+        Default
+      </Button>
+      <Button color="primary" disabled {...events}>
+        Primary
+      </Button>
+      <Button color="danger" disabled {...events}>
+        Danger
+      </Button>
+    </Toolbar>
+  </div>
 );
