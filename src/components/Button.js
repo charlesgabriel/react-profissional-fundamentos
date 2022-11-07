@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
+import { object } from "@storybook/addon-knobs";
 
 // const Button = ({ type, children }) => <Button type={type}>{children}</Button>;
 
@@ -8,6 +9,12 @@ const ButtonColors = {
   default: "default",
   primary: "primary",
   danger: "danger",
+};
+
+const ButtonsVariants = {
+  default: "default",
+  outlined: "outlined",
+  link: "link",
 };
 
 const getMainColor = ({ theme, color }) => {
@@ -34,6 +41,13 @@ const getDarkColor = ({ theme, color }) => {
 
 const getColorText = (props) => props.theme.colors.primary.text;
 
+const getOutlinedText = (props) => {
+  if (props.color === ButtonColors.default) {
+    return "#212121";
+  }
+  return getMainColor(props);
+};
+
 const Button = styled.button`
   background-color: ${getMainColor};
   border: 2px solid ${getMainColor};
@@ -55,18 +69,37 @@ const Button = styled.button`
   }
 `;
 
-const ButtonWrapper = (props) => <Button {...props} />;
+const ButtonOutlined = styled(Button)`
+  background-color: transparent;
+  color: ${getOutlinedText};
+
+  &:hover:enabled {
+    background-color: transparent;
+    color: ${getDarkColor};
+  }
+`;
+
+const ButtonWrapper = (props) => {
+  switch (props.variant) {
+    case ButtonsVariants.outlined:
+      return <ButtonOutlined {...props} />;
+    default:
+      return <Button {...props} />;
+  }
+};
 
 ButtonWrapper.defaultProps = {
   type: "button",
   children: undefined,
   color: "default",
+  variant: "default",
 };
 
 ButtonWrapper.propTypes = {
   type: PropTypes.string,
   children: PropTypes.node,
   color: PropTypes.oneOf(Object.values(ButtonColors)),
+  variant: PropTypes.oneOf(Object.values(ButtonsVariants)),
 };
 
 export default ButtonWrapper;
