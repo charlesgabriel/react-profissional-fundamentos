@@ -5,13 +5,13 @@ import { object } from "@storybook/addon-knobs";
 
 // const Button = ({ type, children }) => <Button type={type}>{children}</Button>;
 
-const ButtonColors = {
+export const ButtonColors = {
   default: "default",
   primary: "primary",
   danger: "danger",
 };
 
-const ButtonsVariants = {
+export const ButtonsVariants = {
   default: "default",
   outlined: "outlined",
   link: "link",
