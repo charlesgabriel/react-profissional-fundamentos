@@ -13,7 +13,7 @@ const Heading = styled.div`
     position: relative;
 
     &::after {
-      background-color: #ffc107;
+      background-color: ${(props) => props.theme.colors.primary.main};
       bottom: -3px;
       content: "";
       height: 5px;

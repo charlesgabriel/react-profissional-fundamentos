@@ -27,7 +27,7 @@ const GlobalStyle = createGlobalStyle`
     line-height: 1.3;
 
     strong {
-      color: #ffc107;
+      color: ${(props) => props.theme.colors.primary.main};
     }
   }
 

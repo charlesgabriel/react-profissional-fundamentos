@@ -45,8 +45,8 @@ const viewports = {
 
 addDecorator((storyFn) => (
   <>
-    <GlobalStyle />
     <ThemeProvider theme={select("Theme", ThemeNames, ThemeNames.light)}>
+      <GlobalStyle />
       {storyFn()}
     </ThemeProvider>
   </>
