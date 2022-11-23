@@ -2,13 +2,13 @@ import React from "react";
 import { text } from "@storybook/addon-knobs";
 
 import Hero from "./Hero";
-import bgHighwayImage from "../stories/assets/bg-highway.jpg";
-import bgCarImage from "../stories/assets/bg-car.jpg";
-import Heading from "./Heading";
-import Button from "./Button";
+import bgHighwayImage from "stories/assets/bg-highway.jpg";
+import bgCarImage from "stories/assets/bg-car.jpg";
+import Heading from "components/atoms/Heading";
+import Button from "components/atoms/Button";
 
 export default {
-  title: "Components/Hero",
+  title: "Components/Molecules/Hero",
   component: Hero,
 };
 
