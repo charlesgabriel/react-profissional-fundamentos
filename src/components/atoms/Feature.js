@@ -15,7 +15,7 @@ Feature.defaultProps = {
   children: undefined,
 };
 
-Feature.PropTypes = {
+Feature.propTypes = {
   icon: PropTypes.node,
   title: PropTypes.string,
   children: PropTypes.node,
