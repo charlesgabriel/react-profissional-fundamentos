@@ -10,6 +10,6 @@ export default {
 
 export const usage = () => (
   <Feature icon={<FaCar />} title="Título">
-    Algum texto
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
   </Feature>
 );
