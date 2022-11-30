@@ -2,6 +2,8 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 
+import { breakAt, BreakpointSizes } from "styles/Breakpoints";
+
 const getPrimaryColor = ({ theme }) => theme.colors.primary.main;
 
 const Root = styled.div`
@@ -9,6 +11,11 @@ const Root = styled.div`
 
   & h5 {
     margin: 16px 0;
+    min-height: 3.12rem;
+
+    ${breakAt(BreakpointSizes.lg)} {
+      min-height: 3.9rem;
+    }
   }
 
   & p {
