@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled, { css } from "styled-components";
 
-import { breakAt, BreakpointSizes } from "styles/Breakpoints";
+import Container from "components/atoms/Container";
 
 const Root = styled.div`
   color: #fff;
@@ -14,21 +14,6 @@ const Root = styled.div`
     background-position: center;
     background-size: cover;
   `}
-`;
-
-const Container = styled.div`
-  padding: 0 8px;
-  width: 100%;
-
-  ${breakAt(BreakpointSizes.sm)} {
-    padding: 0 16px;
-  }
-
-  ${breakAt(BreakpointSizes.lg)} {
-    margin: 0 auto;
-    padding: 0;
-    width: 1140px;
-  }
 `;
 
 const Content = styled.div`

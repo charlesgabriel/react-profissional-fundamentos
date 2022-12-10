@@ -7,6 +7,7 @@ import Heading from "components/atoms/Heading";
 import Button from "components/atoms/Button";
 import Grid from "components/atoms/Grid";
 import Feature from "components/atoms/Feature";
+import Container from "components/atoms/Container";
 
 import bgCarImage from "stories/assets/bg-car.jpg";
 
@@ -32,20 +33,22 @@ const Home = () => (
         Matricule-se agora
       </Button>
     </Hero>
-    <Grid sm={2} md={4}>
-      <Feature icon={<FaCar />} title="Maior e melhor fronta">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-      </Feature>
-      <Feature icon={<FaKey />} title="Habilitação mais rápida">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-      </Feature>
-      <Feature icon={<FaMapMarkedAlt />} title="Excelente localização">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-      </Feature>
-      <Feature icon={<FaAccessibleIcon />} title="Acessibilidade">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-      </Feature>
-    </Grid>
+    <Container>
+      <Grid sm={2} md={4}>
+        <Feature icon={<FaCar />} title="Maior e melhor fronta">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </Feature>
+        <Feature icon={<FaKey />} title="Habilitação mais rápida">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </Feature>
+        <Feature icon={<FaMapMarkedAlt />} title="Excelente localização">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </Feature>
+        <Feature icon={<FaAccessibleIcon />} title="Acessibilidade">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </Feature>
+      </Grid>
+    </Container>
   </>
 );
 
