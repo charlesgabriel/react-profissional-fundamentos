@@ -7,7 +7,7 @@ import Heading from "components/atoms/Heading";
 import Button from "components/atoms/Button";
 import Grid from "components/atoms/Grid";
 import Feature from "components/atoms/Feature";
-import Container from "components/atoms/Container";
+import Section from "components/molecules/Section";
 
 import bgCarImage from "stories/assets/bg-car.jpg";
 
@@ -33,7 +33,7 @@ const Home = () => (
         Matricule-se agora
       </Button>
     </Hero>
-    <Container>
+    <Section>
       <Grid sm={2} md={4}>
         <Feature icon={<FaCar />} title="Maior e melhor fronta">
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
@@ -48,12 +48,12 @@ const Home = () => (
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
         </Feature>
       </Grid>
-    </Container>
+    </Section>
   </>
 );
 
 Home.defaultProps = {};
 
-Home.PropTypes = {};
+Home.propTypes = {};
 
 export default Home;
