@@ -9,11 +9,12 @@ import Grid from "components/atoms/Grid";
 import Feature from "components/atoms/Feature";
 import Section from "components/molecules/Section";
 
-import bgCarImage from "stories/assets/bg-car.jpg";
+import HeroImage from "assets/hero.jpg";
+import AboutVideo from "assets/about.mp4";
 
 const Home = () => (
   <>
-    <Hero image={bgCarImage}>
+    <Hero image={HeroImage}>
       <Heading>
         <h1>
           Ganhe sua <strong>liberdade</strong>
@@ -55,9 +56,25 @@ const Home = () => (
       </Heading>
     </Section>
     <Section>
-      <Heading>
-        <h2>Auto Escola</h2>
-      </Heading>
+      <Grid md={2}>
+        <div>
+          <Heading>
+            <h2>Auto Escola</h2>
+          </Heading>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum
+            consequatur necessitatibus nesciunt eaque quasi, odio ipsum aliquam,
+            excepturi cumque autem voluptatem illo assumenda. Optio, debitis
+            quos. Temporibus soluta expedita vel!
+          </p>
+          <div>
+            <Button color="primary">Saiba mais</Button>
+          </div>
+        </div>
+        <div>
+          <video src={AboutVideo} width="100%" autoPlay loop />
+        </div>
+      </Grid>
     </Section>
     <Section inverse>
       <Heading>
