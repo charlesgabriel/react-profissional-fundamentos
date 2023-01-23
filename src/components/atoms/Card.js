@@ -16,12 +16,16 @@ const StyledBody = styled.div`
 
 export const CardBody = ({ children }) => <StyledBody>{children}</StyledBody>;
 
-const Card = ({ children }) => (
-  <Root>
-    <div />
-    {children}
-  </Root>
-);
+const StyledMedia = styled.div`
+  background-image: url(${(props) => props.image});
+  background-position: center center;
+  background-size: cover;
+  height: 270px;
+`;
+
+export const CardMedia = ({ image }) => <StyledMedia image={image} />;
+
+const Card = ({ children }) => <Root>{children}</Root>;
 
 Card.defaultProps = {};
 
