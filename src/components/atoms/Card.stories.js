@@ -10,6 +10,7 @@ import PlaceholderImage from "stories/assets/transit.jpg";
 export default {
   title: "Components/Atoms/Card",
   component: Card,
+  subcomponents: { CardBody, CardMedia },
 };
 
 export const usage = () => (
