@@ -9,7 +9,7 @@ import Button from "components/atoms/Button";
 const ProductGrid = ({ products }) => (
   <Grid md={3}>
     {products.map((product) => (
-      <Card>
+      <Card key={product.id}>
         <CardMedia image={product.image} />
         <CardBody>
           <Heading>
@@ -32,11 +32,14 @@ ProductGrid.defaultProps = {
 };
 
 ProductGrid.propTypes = {
-  products: PropTypes.shape({
-    image: PropTypes.string,
-    title: PropTypes.string,
-    summary: PropTypes.string,
-  }),
+  products: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+      image: PropTypes.string,
+      title: PropTypes.string,
+      summary: PropTypes.string,
+    })
+  ),
 };
 
 export default ProductGrid;
